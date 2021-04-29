@@ -46,6 +46,7 @@ namespace ControlSystem
             this.SignUpButtonInControl.TabIndex = 1;
             this.SignUpButtonInControl.Text = "Sign up";
             this.SignUpButtonInControl.UseVisualStyleBackColor = true;
+            this.SignUpButtonInControl.Click += new System.EventHandler(this.SignUpButtonInControl_Click);
             // 
             // PasswordLabel
             // 

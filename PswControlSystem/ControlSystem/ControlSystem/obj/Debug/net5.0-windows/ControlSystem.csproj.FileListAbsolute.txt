@@ -18,3 +18,4 @@ C:\Users\njusp\OneDrive - Vilniaus kolegija\2 kursas\Informacijos Saugumas\PswCo
 C:\Users\njusp\OneDrive - Vilniaus kolegija\2 kursas\Informacijos Saugumas\PswControlSystem\ControlSystem\ControlSystem\obj\Debug\net5.0-windows\ControlSystem.pdb
 C:\Users\njusp\OneDrive - Vilniaus kolegija\2 kursas\Informacijos Saugumas\PswControlSystem\ControlSystem\ControlSystem\obj\Debug\net5.0-windows\ControlSystem.genruntimeconfig.cache
 C:\Users\njusp\OneDrive - Vilniaus kolegija\2 kursas\Informacijos Saugumas\PswControlSystem\ControlSystem\ControlSystem\obj\Debug\net5.0-windows\ControlSystem.SignUpControl.resources
+C:\Users\njusp\OneDrive - Vilniaus kolegija\2 kursas\Informacijos Saugumas\PswControlSystem\ControlSystem\ControlSystem\obj\Debug\net5.0-windows\ControlSystem.Logged.resources

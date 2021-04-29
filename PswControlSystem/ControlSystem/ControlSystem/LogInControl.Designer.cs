@@ -44,6 +44,7 @@ namespace ControlSystem
             this.LogInButtonInControl.TabIndex = 0;
             this.LogInButtonInControl.Text = "Log in";
             this.LogInButtonInControl.UseVisualStyleBackColor = true;
+            this.LogInButtonInControl.Click += new System.EventHandler(this.LogInButtonInControl_Click);
             // 
             // UsernameBox
             // 
