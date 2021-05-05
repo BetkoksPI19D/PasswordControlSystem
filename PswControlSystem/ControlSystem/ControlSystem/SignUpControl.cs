@@ -20,6 +20,8 @@ namespace ControlSystem
         public SignUpControl()
         {
             InitializeComponent();
+            PasswordSignUpBox.PasswordChar = '*';
+            ComfirmPassSignUpBox.PasswordChar = '*';
         }
 
         private void SignUpButtonInControl_Click(object sender, EventArgs e)

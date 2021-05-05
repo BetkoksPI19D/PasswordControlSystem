@@ -17,6 +17,7 @@ namespace ControlSystem
         public LogInControl()
         {
             InitializeComponent();
+            PasswordBox.PasswordChar = '*';
         }
 
         private void LogInButtonInControl_Click(object sender, EventArgs e)
@@ -24,7 +25,11 @@ namespace ControlSystem
             string file = File.ReadAllText(path);
             string psw = PasswordBox.Text;
             string hpsw = GetStringSha256Hash(psw);
-            if(file.Contains(UsernameBox.Text) && file.Contains(hpsw))
+            if(UsernameBox.Text == "" || PasswordBox.Text == "")
+            {
+                MessageBox.Show("Username or password sould be filled");
+            }
+            else if (file.Contains(UsernameBox.Text) && file.Contains(hpsw))
             {
                 Logged logd = new Logged();
                 logd.ShowDialog();
@@ -46,6 +51,7 @@ namespace ControlSystem
                 return BitConverter.ToString(hash).Replace("-", String.Empty);
             }
         }
+       
     }
 
 }

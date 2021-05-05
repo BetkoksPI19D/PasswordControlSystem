@@ -10,7 +10,13 @@
     <Compile Update="LogInControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="NewPassControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="SignUpControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UpdatePassControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>
