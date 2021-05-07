@@ -13,6 +13,7 @@ namespace ControlSystem
 {
     public partial class NewPassControl : UserControl
     {
+        Encryption Encr = new Encryption();
         public NewPassControl()
         {
             InitializeComponent();
@@ -52,13 +53,13 @@ namespace ControlSystem
         private void CreateButton_Click(object sender, EventArgs e)
         {
             String usern = UsrnameBox.Text + ",";
-            String psw = PassBox.Text + ",";
+            String psw = Encr.Encrypt(PassBox.Text, "asd" ,true) + ",";
             String URL = URLBox.Text + ",";
             String comm = CommentBox.Text + "\n";
 
             var comb = String.Concat(usern, psw, URL, comm);
 
-            File.AppendAllText(@"C:\Users\njusp\OneDrive - Vilniaus kolegija\2 kursas\Informacijos Saugumas\PswControlSystem\Users\n.txt", comb);
+            File.AppendAllText($@"C:\Users\njusp\OneDrive - Vilniaus kolegija\2 kursas\Informacijos Saugumas\PswControlSystem\Users\{LogInControl.loggedInUsername}.txt", comb);
         }
     }
 }

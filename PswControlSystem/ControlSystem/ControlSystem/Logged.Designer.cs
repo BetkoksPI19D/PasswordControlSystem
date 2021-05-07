@@ -40,7 +40,7 @@ namespace ControlSystem
             // 
             this.PasswControlPanel.Location = new System.Drawing.Point(216, 12);
             this.PasswControlPanel.Name = "PasswControlPanel";
-            this.PasswControlPanel.Size = new System.Drawing.Size(572, 426);
+            this.PasswControlPanel.Size = new System.Drawing.Size(590, 426);
             this.PasswControlPanel.TabIndex = 0;
             // 
             // NewPassButton
@@ -91,7 +91,7 @@ namespace ControlSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(818, 450);
             this.Controls.Add(this.DeletePassButton);
             this.Controls.Add(this.FindPassButton);
             this.Controls.Add(this.UpdatePassButton);

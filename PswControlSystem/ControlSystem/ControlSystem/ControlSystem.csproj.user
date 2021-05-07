@@ -16,6 +16,9 @@
     <Compile Update="SignUpControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="UpdateButtonControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="UpdatePassControl.cs">
       <SubType>UserControl</SubType>
     </Compile>

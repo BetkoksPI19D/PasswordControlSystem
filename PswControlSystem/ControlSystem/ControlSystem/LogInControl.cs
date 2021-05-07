@@ -14,6 +14,7 @@ namespace ControlSystem
     public partial class LogInControl : UserControl
     {
         string path = "C:\\Users\\njusp\\OneDrive - Vilniaus kolegija\\2 kursas\\Informacijos Saugumas\\PswControlSystem\\Database.txt";
+        public static string loggedInUsername;
         public LogInControl()
         {
             InitializeComponent();
@@ -22,17 +23,26 @@ namespace ControlSystem
 
         private void LogInButtonInControl_Click(object sender, EventArgs e)
         {
-            string file = File.ReadAllText(path);
+            string[] file = File.ReadAllLines(path);
             string psw = PasswordBox.Text;
             string hpsw = GetStringSha256Hash(psw);
             if(UsernameBox.Text == "" || PasswordBox.Text == "")
             {
                 MessageBox.Show("Username or password sould be filled");
             }
-            else if (file.Contains(UsernameBox.Text) && file.Contains(hpsw))
+            else if (file.Contains(UsernameBox.Text))
             {
-                Logged logd = new Logged();
-                logd.ShowDialog();
+                int test = Array.IndexOf(file, UsernameBox.Text) + 1;
+                if (file[test] == hpsw)
+                {
+                    loggedInUsername = UsernameBox.Text;
+                    Logged logd = new Logged();
+                    logd.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Wrong username or password");
+                }
             }
             else
             {
