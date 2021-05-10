@@ -11,44 +11,32 @@ using System.Windows.Forms;
 
 namespace ControlSystem
 {
-    public partial class UpdatePassControl : UserControl
+    public partial class DeletePassControl : UserControl
     {
-        Encryption decr = new Encryption();
-        public UpdatePassControl()
+        public DeletePassControl()
         {
             InitializeComponent();
         }
 
         private void ShowAllPassButton_Click(object sender, EventArgs e)
         {
-            ShowPassView.Rows.Clear();
+            DeletePassView.Rows.Clear();
             string[] lines = File.ReadAllLines($@"C:\Users\njusp\OneDrive - Vilniaus kolegija\2 kursas\Informacijos Saugumas\PswControlSystem\Users\{LogInControl.loggedInUsername}.txt");
             string[] lineSplit;
             for (int i = 0; i < lines.Length; i++)
             {
                 lineSplit = lines[i].Split(",");
-                ShowPassView.Rows.Add(new object[] { lineSplit[0], lineSplit[1], lineSplit[2], lineSplit[3] });
-                if (ShowPassBox.Checked)
-                {
-
-                }
+                DeletePassView.Rows.Add(new object[] { lineSplit[0], lineSplit[1], lineSplit[2], lineSplit[3] });
             }
         }
 
-        private void UpdateButton_Click(object sender, EventArgs e)
+        private void DeleteButton_Click(object sender, EventArgs e)
         {
-            ControllerForUpdatePass.Controls.Clear();
-            UpdateButtonControl ubc = new UpdateButtonControl();
-            ControllerForUpdatePass.Controls.Add(ubc);
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if(this.ShowPassView.GetCellCount(DataGridViewElementStates.Selected) > 0)
+            if (this.DeletePassView.GetCellCount(DataGridViewElementStates.Selected) > 0)
             {
                 try
                 {
-                    Clipboard.SetDataObject(this.ShowPassView.GetClipboardContent());
+                    File.WriteAllText($@"C:\Users\njusp\OneDrive - Vilniaus kolegija\2 kursas\Informacijos Saugumas\PswControlSystem\Users\{LogInControl.loggedInUsername}.txt", "");
                 }
                 catch (System.Runtime.InteropServices.ExternalException)
                 {
@@ -56,7 +44,7 @@ namespace ControlSystem
             }
             else
             {
-                MessageBox.Show("Select PASSWORD first");
+                MessageBox.Show("Select ROW first");
             }
         }
     }

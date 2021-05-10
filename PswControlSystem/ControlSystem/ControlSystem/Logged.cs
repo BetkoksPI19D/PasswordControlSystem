@@ -34,11 +34,15 @@ namespace ControlSystem
         private void FindPassButton_Click(object sender, EventArgs e)
         {
             PasswControlPanel.Controls.Clear();
+            FindPassControl fpc = new FindPassControl();
+            PasswControlPanel.Controls.Add(fpc);
         }
 
         private void DeletePassButton_Click(object sender, EventArgs e)
         {
             PasswControlPanel.Controls.Clear();
+            DeletePassControl dpc = new DeletePassControl();
+            PasswControlPanel.Controls.Add(dpc);
         }
 
     }

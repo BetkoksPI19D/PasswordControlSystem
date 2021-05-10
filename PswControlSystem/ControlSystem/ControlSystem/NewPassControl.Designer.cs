@@ -47,7 +47,7 @@ namespace ControlSystem
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(153, 4);
+            this.label1.Location = new System.Drawing.Point(252, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(112, 20);
             this.label1.TabIndex = 0;
@@ -56,7 +56,7 @@ namespace ControlSystem
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(29, 86);
+            this.label2.Location = new System.Drawing.Point(114, 91);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 20);
             this.label2.TabIndex = 1;
@@ -65,7 +65,7 @@ namespace ControlSystem
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(34, 119);
+            this.label3.Location = new System.Drawing.Point(119, 124);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 20);
             this.label3.TabIndex = 2;
@@ -74,7 +74,7 @@ namespace ControlSystem
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(73, 188);
+            this.label4.Location = new System.Drawing.Point(158, 193);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(38, 20);
             this.label4.TabIndex = 3;
@@ -83,7 +83,7 @@ namespace ControlSystem
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(30, 221);
+            this.label5.Location = new System.Drawing.Point(115, 226);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(81, 20);
             this.label5.TabIndex = 4;
@@ -91,28 +91,28 @@ namespace ControlSystem
             // 
             // UsrnameBox
             // 
-            this.UsrnameBox.Location = new System.Drawing.Point(117, 83);
+            this.UsrnameBox.Location = new System.Drawing.Point(202, 88);
             this.UsrnameBox.Name = "UsrnameBox";
             this.UsrnameBox.Size = new System.Drawing.Size(232, 27);
             this.UsrnameBox.TabIndex = 5;
             // 
             // PassBox
             // 
-            this.PassBox.Location = new System.Drawing.Point(117, 116);
+            this.PassBox.Location = new System.Drawing.Point(202, 121);
             this.PassBox.Name = "PassBox";
             this.PassBox.Size = new System.Drawing.Size(232, 27);
             this.PassBox.TabIndex = 6;
             // 
             // URLBox
             // 
-            this.URLBox.Location = new System.Drawing.Point(117, 185);
+            this.URLBox.Location = new System.Drawing.Point(202, 190);
             this.URLBox.Name = "URLBox";
             this.URLBox.Size = new System.Drawing.Size(232, 27);
             this.URLBox.TabIndex = 7;
             // 
             // CommentBox
             // 
-            this.CommentBox.Location = new System.Drawing.Point(117, 218);
+            this.CommentBox.Location = new System.Drawing.Point(202, 223);
             this.CommentBox.Name = "CommentBox";
             this.CommentBox.Size = new System.Drawing.Size(232, 27);
             this.CommentBox.TabIndex = 8;
@@ -120,7 +120,7 @@ namespace ControlSystem
             // CreateButton
             // 
             this.CreateButton.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.CreateButton.Location = new System.Drawing.Point(265, 286);
+            this.CreateButton.Location = new System.Drawing.Point(350, 291);
             this.CreateButton.Name = "CreateButton";
             this.CreateButton.Size = new System.Drawing.Size(113, 32);
             this.CreateButton.TabIndex = 9;
@@ -130,7 +130,7 @@ namespace ControlSystem
             // 
             // RandomPassButton
             // 
-            this.RandomPassButton.Location = new System.Drawing.Point(355, 114);
+            this.RandomPassButton.Location = new System.Drawing.Point(440, 119);
             this.RandomPassButton.Name = "RandomPassButton";
             this.RandomPassButton.Size = new System.Drawing.Size(46, 29);
             this.RandomPassButton.TabIndex = 10;
@@ -141,7 +141,7 @@ namespace ControlSystem
             // ShowPassButton
             // 
             this.ShowPassButton.AutoSize = true;
-            this.ShowPassButton.Location = new System.Drawing.Point(282, 149);
+            this.ShowPassButton.Location = new System.Drawing.Point(367, 154);
             this.ShowPassButton.Name = "ShowPassButton";
             this.ShowPassButton.Size = new System.Drawing.Size(67, 24);
             this.ShowPassButton.TabIndex = 11;
@@ -166,7 +166,7 @@ namespace ControlSystem
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "NewPassControl";
-            this.Size = new System.Drawing.Size(505, 360);
+            this.Size = new System.Drawing.Size(590, 426);
             this.ResumeLayout(false);
             this.PerformLayout();
 

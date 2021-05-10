@@ -22,3 +22,5 @@ C:\Users\njusp\OneDrive - Vilniaus kolegija\2 kursas\Informacijos Saugumas\PswCo
 C:\Users\njusp\OneDrive - Vilniaus kolegija\2 kursas\Informacijos Saugumas\PswControlSystem\ControlSystem\ControlSystem\obj\Debug\net5.0-windows\ControlSystem.NewPassControl.resources
 C:\Users\njusp\OneDrive - Vilniaus kolegija\2 kursas\Informacijos Saugumas\PswControlSystem\ControlSystem\ControlSystem\obj\Debug\net5.0-windows\ControlSystem.UpdatePassControl.resources
 C:\Users\njusp\OneDrive - Vilniaus kolegija\2 kursas\Informacijos Saugumas\PswControlSystem\ControlSystem\ControlSystem\obj\Debug\net5.0-windows\ControlSystem.UpdateButtonControl.resources
+C:\Users\njusp\OneDrive - Vilniaus kolegija\2 kursas\Informacijos Saugumas\PswControlSystem\ControlSystem\ControlSystem\obj\Debug\net5.0-windows\ControlSystem.FindPassControl.resources
+C:\Users\njusp\OneDrive - Vilniaus kolegija\2 kursas\Informacijos Saugumas\PswControlSystem\ControlSystem\ControlSystem\obj\Debug\net5.0-windows\ControlSystem.DeletePassControl.resources
