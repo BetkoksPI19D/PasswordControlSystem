@@ -39,6 +39,7 @@ namespace ControlSystem
             this.ShowByNameButton = new System.Windows.Forms.Button();
             this.UsernameBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.ShowPassBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.FindPswView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -107,7 +108,7 @@ namespace ControlSystem
             // 
             // ShowByNameButton
             // 
-            this.ShowByNameButton.Location = new System.Drawing.Point(17, 80);
+            this.ShowByNameButton.Location = new System.Drawing.Point(156, 80);
             this.ShowByNameButton.Name = "ShowByNameButton";
             this.ShowByNameButton.Size = new System.Drawing.Size(103, 29);
             this.ShowByNameButton.TabIndex = 5;
@@ -117,14 +118,14 @@ namespace ControlSystem
             // 
             // UsernameBox
             // 
-            this.UsernameBox.Location = new System.Drawing.Point(126, 82);
+            this.UsernameBox.Location = new System.Drawing.Point(17, 82);
             this.UsernameBox.Name = "UsernameBox";
             this.UsernameBox.Size = new System.Drawing.Size(133, 27);
             this.UsernameBox.TabIndex = 6;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(477, 80);
+            this.button1.Location = new System.Drawing.Point(404, 80);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(94, 29);
             this.button1.TabIndex = 13;
@@ -132,10 +133,22 @@ namespace ControlSystem
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // ShowPassBox
+            // 
+            this.ShowPassBox.AutoSize = true;
+            this.ShowPassBox.Location = new System.Drawing.Point(504, 85);
+            this.ShowPassBox.Name = "ShowPassBox";
+            this.ShowPassBox.Size = new System.Drawing.Size(67, 24);
+            this.ShowPassBox.TabIndex = 14;
+            this.ShowPassBox.Text = "Show";
+            this.ShowPassBox.UseVisualStyleBackColor = true;
+            this.ShowPassBox.CheckedChanged += new System.EventHandler(this.ShowPassBox_CheckedChanged);
+            // 
             // FindPassControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.ShowPassBox);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.UsernameBox);
             this.Controls.Add(this.ShowByNameButton);
@@ -162,5 +175,6 @@ namespace ControlSystem
         private System.Windows.Forms.DataGridViewTextBoxColumn Password;
         private System.Windows.Forms.DataGridViewTextBoxColumn URL;
         private System.Windows.Forms.DataGridViewTextBoxColumn Comment;
+        private System.Windows.Forms.CheckBox ShowPassBox;
     }
 }

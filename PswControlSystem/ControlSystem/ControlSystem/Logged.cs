@@ -12,9 +12,14 @@ namespace ControlSystem
 {
     public partial class Logged : Form
     {
-        public Logged()
+        FileCryption fcrypt = new FileCryption();
+        LogInControl lic = new LogInControl();
+        private string psw = "key";
+        string username;
+        public Logged(string username)
         {
             InitializeComponent();
+            this.username = username;
         }
 
         private void NewPassButton_Click(object sender, EventArgs e)
@@ -45,5 +50,11 @@ namespace ControlSystem
             PasswControlPanel.Controls.Add(dpc);
         }
 
+        private void Logged_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            string usersPath = $@"C:\Users\njusp\OneDrive - Vilniaus kolegija\2 kursas\Informacijos Saugumas\PswControlSystem\Users\" + username + ".txt";
+
+            fcrypt.FileEcnryption(usersPath, psw);
+        }
     }
 }

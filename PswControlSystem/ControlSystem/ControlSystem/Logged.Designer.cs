@@ -99,6 +99,7 @@ namespace ControlSystem
             this.Controls.Add(this.PasswControlPanel);
             this.Name = "Logged";
             this.Text = "Logged";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Logged_FormClosing);
             this.ResumeLayout(false);
 
         }

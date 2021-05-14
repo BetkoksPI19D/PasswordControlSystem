@@ -37,6 +37,7 @@ namespace ControlSystem
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ShowAllPassButton = new System.Windows.Forms.Button();
             this.DeleteButton = new System.Windows.Forms.Button();
+            this.ShowPassBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.DeletePassView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,6 +63,7 @@ namespace ControlSystem
             this.DeletePassView.Name = "DeletePassView";
             this.DeletePassView.RowHeadersWidth = 51;
             this.DeletePassView.RowTemplate.Height = 29;
+            this.DeletePassView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DeletePassView.Size = new System.Drawing.Size(554, 177);
             this.DeletePassView.TabIndex = 12;
             // 
@@ -114,10 +116,22 @@ namespace ControlSystem
             this.DeleteButton.UseVisualStyleBackColor = true;
             this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
+            // ShowPassBox
+            // 
+            this.ShowPassBox.AutoSize = true;
+            this.ShowPassBox.Location = new System.Drawing.Point(505, 95);
+            this.ShowPassBox.Name = "ShowPassBox";
+            this.ShowPassBox.Size = new System.Drawing.Size(67, 24);
+            this.ShowPassBox.TabIndex = 15;
+            this.ShowPassBox.Text = "Show";
+            this.ShowPassBox.UseVisualStyleBackColor = true;
+            this.ShowPassBox.CheckedChanged += new System.EventHandler(this.ShowPassBox_CheckedChanged);
+            // 
             // DeletePassControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.ShowPassBox);
             this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.ShowAllPassButton);
             this.Controls.Add(this.DeletePassView);
@@ -140,5 +154,6 @@ namespace ControlSystem
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.Button ShowAllPassButton;
         private System.Windows.Forms.Button DeleteButton;
+        private System.Windows.Forms.CheckBox ShowPassBox;
     }
 }

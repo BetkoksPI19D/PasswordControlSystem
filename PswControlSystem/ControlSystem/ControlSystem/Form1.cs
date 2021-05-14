@@ -12,6 +12,12 @@ namespace ControlSystem
 {
     public partial class Form1 : Form
     {
+        FileCryption fcrypt = new FileCryption();
+        LogInControl lic = new LogInControl();
+        string databasePathAes = "C:\\Users\\njusp\\OneDrive - Vilniaus kolegija\\2 kursas\\Informacijos Saugumas\\PswControlSystem\\Database.txt.aes";
+        string databasePath = "C:\\Users\\njusp\\OneDrive - Vilniaus kolegija\\2 kursas\\Informacijos Saugumas\\PswControlSystem\\Database.txt";
+
+        private string psw = "key";
         public Form1()
         {
             InitializeComponent();
@@ -29,6 +35,17 @@ namespace ControlSystem
             MainWindomPanel.Controls.Clear();
             SignUpControl suc = new SignUpControl();
             MainWindomPanel.Controls.Add(suc);
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            fcrypt.FileEcnryption(databasePath, psw);
+        }
+
+        private void Form1_Shown(object sender, EventArgs e)
+        {
+
+            fcrypt.FileDecryption(databasePathAes, databasePath, psw);
         }
     }
 }

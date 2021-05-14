@@ -13,8 +13,11 @@ namespace ControlSystem
 {
     public partial class LogInControl : UserControl
     {
+        FileCryption fcrypt = new FileCryption();
         string path = "C:\\Users\\njusp\\OneDrive - Vilniaus kolegija\\2 kursas\\Informacijos Saugumas\\PswControlSystem\\Database.txt";
         public static string loggedInUsername;
+        private string pswd = "key";
+
         public LogInControl()
         {
             InitializeComponent();
@@ -35,8 +38,12 @@ namespace ControlSystem
                 int test = Array.IndexOf(file, UsernameBox.Text) + 1;
                 if (file[test] == hpsw)
                 {
+                    string usersPathAes = $@"C:\Users\njusp\OneDrive - Vilniaus kolegija\2 kursas\Informacijos Saugumas\PswControlSystem\Users\"+ UsernameBox.Text +".txt.aes";
+                    string usersPath = $@"C:\Users\njusp\OneDrive - Vilniaus kolegija\2 kursas\Informacijos Saugumas\PswControlSystem\Users\"+ UsernameBox.Text +".txt";
                     loggedInUsername = UsernameBox.Text;
-                    Logged logd = new Logged();
+                    fcrypt.FileDecryption(usersPathAes, usersPath, pswd);
+                    string username = UsernameBox.Text;
+                    Logged logd = new Logged(username);
                     logd.ShowDialog();
                 }
                 else
@@ -61,7 +68,6 @@ namespace ControlSystem
                 return BitConverter.ToString(hash).Replace("-", String.Empty);
             }
         }
-       
     }
 
 }

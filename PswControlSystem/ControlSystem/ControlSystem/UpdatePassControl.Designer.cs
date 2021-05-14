@@ -39,7 +39,8 @@ namespace ControlSystem
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.ShowPassBox = new System.Windows.Forms.CheckBox();
-            this.ControllerForUpdatePass = new System.Windows.Forms.Panel();
+            this.NewPassBox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ShowPassView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -136,19 +137,30 @@ namespace ControlSystem
             this.ShowPassBox.TabIndex = 13;
             this.ShowPassBox.Text = "Show";
             this.ShowPassBox.UseVisualStyleBackColor = true;
+            this.ShowPassBox.CheckedChanged += new System.EventHandler(this.ShowPassBox_CheckedChanged);
             // 
-            // ControllerForUpdatePass
+            // NewPassBox
             // 
-            this.ControllerForUpdatePass.Location = new System.Drawing.Point(21, 295);
-            this.ControllerForUpdatePass.Name = "ControllerForUpdatePass";
-            this.ControllerForUpdatePass.Size = new System.Drawing.Size(338, 119);
-            this.ControllerForUpdatePass.TabIndex = 14;
+            this.NewPassBox.Location = new System.Drawing.Point(136, 298);
+            this.NewPassBox.Name = "NewPassBox";
+            this.NewPassBox.Size = new System.Drawing.Size(125, 27);
+            this.NewPassBox.TabIndex = 14;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(21, 301);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(109, 20);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "New password:";
             // 
             // UpdatePassControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.ControllerForUpdatePass);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.NewPassBox);
             this.Controls.Add(this.ShowPassBox);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.ShowPassView);
@@ -176,6 +188,7 @@ namespace ControlSystem
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.CheckBox ShowPassBox;
-        private System.Windows.Forms.Panel ControllerForUpdatePass;
+        private System.Windows.Forms.TextBox NewPassBox;
+        private System.Windows.Forms.Label label2;
     }
 }
